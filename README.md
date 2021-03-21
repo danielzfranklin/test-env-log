@@ -91,6 +91,7 @@ used to influence the log level to work with (among other things).
 Please refer to the [`env_logger` docs][env-docs-rs] for more
 information.
 
+<<<<<<< HEAD
 If the `trace` feature is enabled, the `RUST_LOG_SPAN_EVENTS`
 environment variable can be used to configure the tracing subscriber to
 log synthesized events at points in the span lifecycle. Set the variable
@@ -100,6 +101,15 @@ to a comma-separated list of events you want to see. For example,
 Valid events are `new`, `enter`, `exit`, `close`, `active`, and `full`.
 See the [`tracing_subscriber` docs][tracing-events-docs-rs] for details
 on what the events mean.
+=======
+If the feature `trace` is enabled, the `RUST_LOG_SPAN_EVENTS` environment variable can be used to configure the tracing
+subscriber to log synthesized events at points in the span lifecycle. Set the variable to a comma-separated list of
+events you want to see. For example, `RUST_LOG_SPAN_EVENTS=full` or `RUST_LOG_SPAN_EVENTS=new,close`.
+
+Valid events are `new`, `enter`, `exit`, `close`, `active`, and `full`. See
+the [`tracing_subscriber` docs][tracing-events-docs-rs] for details on what the events
+mean.
+>>>>>>> 0de7aa4... Support configuring span events
 
 #### Features
 
